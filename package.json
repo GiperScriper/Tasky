@@ -54,14 +54,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
+    "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -101,9 +94,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^7.1.3"
   }
 }
