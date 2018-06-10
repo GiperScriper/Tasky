@@ -5,15 +5,14 @@ import authService from 'helpers/authService';
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={props =>
+    component={props =>
       authService.isAuthenticated() ? (
-        <Component {...props} />
+        <div>
+          <h1>header</h1>
+          <Component {...props} />
+        </div>
       ) : (
-        <Redirect
-          to={{
-            pathname: '/login',
-          }}
-        />
+        <Redirect to="/login" />
       )
     }
   />
