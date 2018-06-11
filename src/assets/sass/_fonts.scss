@@ -1,0 +1,5 @@
+@import "font-face";
+
+@include font-face("Roboto", "~/fonts/RobotoRegular/RobotoRegular");
+@include font-face("Roboto", "~/fonts/RobotoBold/RobotoBold", bold);
+@include font-face("GloriaHallelujah", "~/fonts/GloriaHallelujah/GloriaHallelujah");

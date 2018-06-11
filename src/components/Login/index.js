@@ -2,7 +2,8 @@ import React from 'react';
 import { Form, Field } from 'react-final-form';
 import authService from 'helpers/authService';
 import { required, renderInputWithError } from 'helpers/validation';
-import './login.css';
+
+import './login.scss';
 
 export default class loginForm extends React.Component {
   onSubmit = data => {
@@ -15,21 +16,22 @@ export default class loginForm extends React.Component {
   render() {
     return (
       <div className="login__container">
+        <div className="login__title">Tasky</div>
         <Form
           onSubmit={this.onSubmit}
           render={({ handleSubmit, pristine, invalid }) => (
-            <form name="loginForm" onSubmit={handleSubmit}>
+            <form name="loginForm" onSubmit={handleSubmit} className="login__form">
               <Field
                 name="login"
                 type="text"
-                placeholder="enter login..."
+                placeholder="Username"
                 validate={required}
                 component={renderInputWithError}
               />
               <Field
                 name="password"
                 type="password"
-                placeholder="enter password..."
+                placeholder="Password"
                 validate={required}
                 component={renderInputWithError}
               />
