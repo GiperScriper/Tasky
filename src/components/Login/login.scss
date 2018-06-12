@@ -9,10 +9,10 @@
     width: 100vw;
     height: 100vh;
 
-    @include gradient(120deg, $orange, $yellow);
+    @include gradient(180deg, $blue, $light-blue);
   }
   &__title {
-
+    font-family: $gloria-font;
   }
   &__form {
     width: 450px;
