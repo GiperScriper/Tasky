@@ -1,48 +1,7 @@
 @import "vars";
 @import "fonts";
 
-::placeholder {
-	color: #ccc;
-}
-	
-::selection {
-	background-color: $accent;
-	color: #fff;
-}
+@import "base";
 
-html, body {
-	height: 100%;
-}
-
-body {
-	font-size: 16px;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.65;
-	font-family: $default-font;
-	overflow-x: hidden;
-}
-	
-input, textarea {
-	border: 1px solid #ccc;
-	padding: 10px;
-	outline: none;
-	&:focus:required:invalid {
-		border-color: red;
-	}
-	&:required:valid {
-		border-color: green;
-	}
-}
-
-a {
-	text-decoration: none;
-	color: $text-color;
-	&:hover {
-		text-decoration: none;
-	}
-}
-	
-.text-center {
-	text-align: center;
-}
+// Components
+@import 'components/Login/login';
