@@ -1,5 +1,3 @@
-@import "mixins";
-
 $default-font: "Roboto", sans-serif;
 
 $white: #fff;
@@ -9,3 +7,16 @@ $yellow: #f7b733;
 $accent: orange;
 $error: #f18b8b;
 $text-color: #000;
+
+
+// =============================================================================
+// Mixins
+// =============================================================================
+
+@mixin transition-animation {
+  transition: all 0.5s;
+}
+
+@mixin gradient($deg, $from, $to) {
+  background-image: linear-gradient($deg, $from, $to);
+}

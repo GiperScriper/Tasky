@@ -1,7 +1,0 @@
-@mixin transition-animation {
-  transition: all 0.5s;
-}
-
-@mixin gradient($deg, $from, $to) {
-  background-image: linear-gradient($deg, $from, $to);
-}

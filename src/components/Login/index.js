@@ -3,6 +3,8 @@ import { Form, Field } from 'react-final-form';
 import authService from 'helpers/authService';
 import { required, renderInputWithError } from 'helpers/validation';
 
+import './login.scss';
+
 export default class loginForm extends React.Component {
   onSubmit = data => {
     console.log('submit', data);
