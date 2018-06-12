@@ -21,6 +21,7 @@ export default class loginForm extends React.Component {
           onSubmit={this.onSubmit}
           render={({ handleSubmit, pristine, invalid }) => (
             <form name="loginForm" onSubmit={handleSubmit} className="login__form">
+              <div className="pinned">.</div>
               <Field
                 name="login"
                 type="text"

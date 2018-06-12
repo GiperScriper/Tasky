@@ -13,14 +13,24 @@
   }
   &__title {
     font-family: $gloria-font;
+
+    color: $white;
+    font-size: 40px;
+
+    padding-bottom: 10px;
   }
   &__form {
     width: 450px;
-    padding: 30px 20px;
+    height: 380px;
 
-    background-color: $white;
-    border-radius: 6px;
-    box-shadow: 0px 5px 45px -10px $black;
+    margin-top: 50px;
+    padding: 50px 20px 30px 20px;
+
+    position: relative;
+
+    background-image: url(../../assets/images/paper-bg.png);
+    background-size: cover;
+
     &-item {
       display: flex;
       flex-direction: column;
@@ -32,8 +42,10 @@
       font-size: 20px;
 
       border-radius: 4px;
+      background-color: $white-opacity;
       &::placeholder {
         font-size: 16px;
+        color: $black;
       }
     }
     &-error {
@@ -45,5 +57,19 @@
       @include transition-animation;
     }
   }
+}
+
+.pinned {
+  width: 70px;
+  height: 70px;
+
+  position: absolute;
+  top: -45px;
+  left: 50%;
+
+  font-size: 0;
+  margin-left: -35px;
+
+  background-image: url(../../assets/images/push-pin.svg);
 }
 
