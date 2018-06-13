@@ -5,16 +5,7 @@ import authService from 'helpers/authService';
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    component={props =>
-      authService.isAuthenticated() ? (
-        <div>
-          <h1>header</h1>
-          <Component {...props} />
-        </div>
-      ) : (
-        <Redirect to="/login" />
-      )
-    }
+    component={props => (authService.isAuthenticated() ? <Component {...props} /> : <Redirect to="/login" />)}
   />
 );
 

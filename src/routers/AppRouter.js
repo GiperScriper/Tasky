@@ -7,12 +7,10 @@ import Login from 'components/Login';
 
 const appRouter = () => (
   <BrowserRouter>
-    <div className="container">
-      <Switch>
-        <Route path="/login" component={Login} />
-        <PrivateRoute path="/" component={Dashboard} exact />
-      </Switch>
-    </div>
+    <Switch>
+      <Route path="/login" component={Login} />
+      <PrivateRoute path="/" component={Dashboard} exact />
+    </Switch>
   </BrowserRouter>
 );
 
