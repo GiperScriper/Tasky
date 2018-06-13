@@ -4,48 +4,57 @@
   &__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+
     width: 100vw;
     height: 100vh;
 
     @include gradient(180deg, $blue, $light-blue);
   }
-  &__title {
-    font-family: $gloria-font;
+  &__bg {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 
-    color: $white;
-    font-size: 40px;
+    width: 680px;
+    height: 580px;
 
-    padding-bottom: 10px;
+    background-image: url(../../assets/images/wood.png);
+    background-position: top center;
+    background-size: cover;
   }
   &__form {
-    width: 450px;
-    height: 380px;
+    width: 420px;
 
-    margin-top: 50px;
-    padding: 50px 20px 30px 20px;
+    padding-left: 20px;
+    margin-bottom: 75px;
 
-    position: relative;
-
-    background-image: url(../../assets/images/paper-bg.png);
-    background-size: cover;
-
+    text-align: center;
     &-item {
       display: flex;
       flex-direction: column;
+
       margin-bottom: 20px;
     }
     &-input {
       padding: 15px;
 
-      font-size: 20px;
+      font-size: 25px;
+      line-height: 25px;
+      color: $brown;
 
+      border: 2px solid $light-brown;
       border-radius: 4px;
-      background-color: $white-opacity;
+      box-shadow: inset 1px 0px 25px 0px $light-brown;
+
+      @include transition-animation;
       &::placeholder {
-        font-size: 16px;
-        color: $black;
+        font-size: 20px;
+        color: $light-brown;
+        opacity: 0.5;
+      }
+      &:focus {
+        box-shadow: none;
       }
     }
     &-error {
@@ -57,19 +66,37 @@
       @include transition-animation;
     }
   }
-}
+  &__title {
+    font-family: $gloria-font;
 
-.pinned {
-  width: 70px;
-  height: 70px;
+    color: $white;
+    font-size: 60px;
 
-  position: absolute;
-  top: -45px;
-  left: 50%;
+    margin-top: 100px;
+  }
+  &__button {
+    width: 100%;
 
-  font-size: 0;
-  margin-left: -35px;
+    padding: 15px 20px;
 
-  background-image: url(../../assets/images/push-pin.svg);
+    font-family: $gloria-font;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 25px;
+
+    border: none;
+    border-bottom: 3px solid $white;
+    border-radius: 4px;
+
+    cursor: pointer;
+    
+    color: $white;
+    background-color: $brown;
+
+    @include transition-animation;
+    &:hover {
+      @include gradient(180deg, $brown, $light-brown);
+    }
+  }
 }
 
