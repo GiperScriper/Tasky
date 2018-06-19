@@ -16,18 +16,19 @@
     justify-content: center;
     align-items: flex-end;
 
-    width: 680px;
-    height: 580px;
+    width: 490px;
+    height: 515px;
 
     background-image: url(../../assets/images/wood.png);
     background-position: top center;
     background-size: cover;
+
+    animation: animatewood .5s linear;
   }
   &__form {
-    width: 420px;
+    width: 400px;
 
-    padding-left: 20px;
-    margin-bottom: 75px;
+    margin-bottom: 70px;
 
     text-align: center;
     &-item {
@@ -37,10 +38,10 @@
       margin-bottom: 20px;
     }
     &-input {
-      padding: 15px;
+      padding: 12px;
 
-      font-size: 25px;
-      line-height: 25px;
+      font-size: 20px;
+      line-height: 20px;
       color: $brown;
 
       border: 2px solid $light-brown;
@@ -77,7 +78,7 @@
   &__button {
     width: 100%;
 
-    padding: 15px 20px;
+    padding: 12px;
 
     font-family: $gloria-font;
     text-transform: uppercase;
