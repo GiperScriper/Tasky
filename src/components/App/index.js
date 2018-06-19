@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { login } from 'actions/auth';
+import AuthService from 'helpers/authService';
 import AppRouter from 'routers/AppRouter';
 
 class App extends Component {
+  componentWillMount = () => {
+    if (AuthService.isAuthenticated()) {
+      this.props.login('some data');
+    }
+  };
+
   render() {
     return (
       <div className="container">
@@ -11,4 +21,17 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = ({ auth }) => {
+  return {
+    isLoggenIn: auth.loggedIn,
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  login: data => dispatch(login(data)),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

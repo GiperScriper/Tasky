@@ -1,14 +1,17 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
 import authService from 'helpers/authService';
+import { connect } from 'react-redux';
+import { login } from 'actions/auth';
 import { renderInputWithError } from 'helpers/validation';
 
 import './login.scss';
 
-export default class loginForm extends React.Component {
+class loginForm extends React.Component {
   onSubmit = data => {
-    console.log('submit', data);
+    console.log('this.props', this.props);
     authService.setToken(data.login);
+    this.props.login('test data');
     this.props.history.push('/');
     // TO-DO signin request
   };
@@ -35,3 +38,12 @@ export default class loginForm extends React.Component {
     );
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  login: data => dispatch(login(data)),
+});
+
+export default connect(
+  undefined,
+  mapDispatchToProps
+)(loginForm);
