@@ -6,8 +6,8 @@ import Projects from 'components/Projects';
 
 const appRouter = () => (
   <Fragment>
-    <Route path="/" component={Dashboard} />
-    <Route path="/projects" component={Projects} exact />
+    <Route path="/" component={Dashboard} exact />
+    <Route path="/projects" component={Projects} />
   </Fragment>
 );
 
