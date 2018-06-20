@@ -5,6 +5,8 @@ import { login } from 'actions/auth';
 import AuthService from 'helpers/authService';
 import AppRouter from 'routers/AppRouter';
 
+import Header from 'components/Header';
+
 class App extends Component {
   componentWillMount = () => {
     if (AuthService.isAuthenticated()) {
@@ -15,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <Header />
         <AppRouter />
       </div>
     );

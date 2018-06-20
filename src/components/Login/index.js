@@ -9,7 +9,6 @@ import './login.scss';
 
 class loginForm extends React.Component {
   onSubmit = data => {
-    console.log('this.props', this.props);
     authService.setToken(data.login);
     this.props.login('test data');
     this.props.history.push('/');

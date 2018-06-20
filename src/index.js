@@ -7,16 +7,16 @@ import registerServiceWorker from './registerServiceWorker';
 import 'normalize.css';
 import 'assets/styles/main.scss';
 
-import App from './components/App';
+import MainRouter from './routers/MainRouter';
 // import './firebase';
 
 const store = createStore();
 
-const jsx = (
+const App = (
   <Provider store={store}>
-    <App />
+    <MainRouter />
   </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById('root'));
+ReactDOM.render(App, document.getElementById('root'));
 registerServiceWorker();

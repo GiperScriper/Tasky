@@ -1,17 +1,14 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import PrivateRoute from './PrivateRoute';
+import React, { Fragment } from 'react';
+import { Route } from 'react-router-dom';
 
-import Login from 'components/Login';
-import Layout from 'components/Layout';
+import Dashboard from 'components/Dashboard';
+import Projects from 'components/Projects';
 
 const appRouter = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route path="/login" component={Login} />
-      <PrivateRoute path="/" component={Layout} />
-    </Switch>
-  </BrowserRouter>
+  <Fragment>
+    <Route path="/" component={Dashboard} />
+    <Route path="/projects" component={Projects} exact />
+  </Fragment>
 );
 
 export default appRouter;
