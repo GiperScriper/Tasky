@@ -1,6 +1,5 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import authService from 'helpers/authService';
 import { connect } from 'react-redux';
 import { login } from 'actions/auth';
 import { renderInputWithError } from 'helpers/validation';
@@ -9,13 +8,13 @@ import './login.scss';
 
 class loginForm extends React.Component {
   onSubmit = data => {
-    authService.setToken(data.login);
-    this.props.login('test data');
-    this.props.history.push('/');
-    // TO-DO signin request
+    this.props.login(data).then(() => {
+      this.props.history.push('/');
+    });
   };
 
   render() {
+    console.log('render login');
     return (
       <div className="login__container">
         <div className="login__title">Tasky</div>

@@ -8,7 +8,6 @@ import 'normalize.css';
 import 'assets/styles/main.scss';
 
 import MainRouter from './routers/MainRouter';
-// import './firebase';
 
 const store = createStore();
 

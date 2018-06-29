@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  console.log('render');
+  console.log('render Header');
   return (
     <header>
       <nav>

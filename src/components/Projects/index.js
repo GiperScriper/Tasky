@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Projects = () => (
-  <div>
-    <h1>Projects</h1>
-  </div>
-);
+const Projects = () => {
+  console.log('render Projects');
+  return (
+    <div>
+      <h1>Projects</h1>
+    </div>
+  );
+};
 
 export default Projects;

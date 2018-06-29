@@ -10,11 +10,12 @@ import Header from 'components/Header';
 class App extends Component {
   componentWillMount = () => {
     if (AuthService.isAuthenticated()) {
-      this.props.login('some data');
+      // this.props.login('some data');
     }
   };
 
   render() {
+    console.log('app');
     return (
       <div className="container">
         <Header />
