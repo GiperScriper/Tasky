@@ -25,6 +25,6 @@ export const login = ({ login, password }) => async dispatch => {
 
     return Promise.resolve();
   } catch (error) {
-    dispatch(loginFailed(loginFailed(error)));
+    dispatch(loginFailed(error));
   }
 };
