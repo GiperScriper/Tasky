@@ -11,6 +11,7 @@
 
     @include gradient(180deg, $blue, $light-blue);
   }
+
   &__bg {
     display: flex;
     justify-content: center;
@@ -25,39 +26,13 @@
 
     animation: animatewood .5s linear;
   }
+
   &__form {
     width: 400px;
 
     margin-bottom: 70px;
 
     text-align: center;
-    &-item {
-      display: flex;
-      flex-direction: column;
-
-      margin-bottom: 20px;
-    }
-    &-input {
-      padding: 12px;
-
-      font-size: 20px;
-      line-height: 20px;
-      color: $brown;
-
-      border: 2px solid $light-brown;
-      border-radius: 4px;
-      box-shadow: inset 1px 0px 25px 0px $light-brown;
-
-      @include transition-animation;
-      &::placeholder {
-        font-size: 20px;
-        color: $light-brown;
-        opacity: 0.5;
-      }
-      &:focus {
-        box-shadow: none;
-      }
-    }
     &-error {
       padding-left: 10px;
 
@@ -67,6 +42,57 @@
       @include transition-animation;
     }
   }
+
+  &__input {
+    padding: 12px 12px 12px 45px;
+
+    border: 2px solid $light-brown;
+    border-radius: 4px;
+    box-shadow: inset 1px 0px 25px 0px $light-brown;
+    box-sizing: border-box;
+
+    @include transition-animation;
+    &::placeholder {
+      font-size: 20px;
+      color: $light-brown;
+      opacity: 0.5;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    color: $brown;
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-bottom: 20px;
+    &::before {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+
+      font-family: $awesome-font;
+      font-weight: 600;
+    }
+    &--text {
+      &::before {
+        content: "\f007";
+      }
+    }
+    &--password {
+      &::before {
+        content: "\f023";
+      }
+    }
+  }
+  
   &__title {
     font-family: $gloria-font;
 
