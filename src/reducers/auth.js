@@ -1,4 +1,4 @@
-import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILED, LOGOUT } from 'config/constants';
+import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILED, LOGOUT } from '@/config/constants';
 
 const initialState = {
   isPending: false,
