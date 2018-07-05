@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default () => {
+export const Dashboard = () => {
   console.log('render Dashboard');
   return (
     <div>
@@ -8,3 +8,5 @@ export default () => {
     </div>
   );
 };
+
+export default Dashboard;

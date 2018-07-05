@@ -1,7 +1,7 @@
 import React from 'react';
-import Project from './Project';
+import ProjectList from './ProjectList';
 
-const Projects = () => {
+export const Projects = () => {
   console.log('render projects');
   const projects = [
     {
@@ -20,13 +20,7 @@ const Projects = () => {
     <div>
       <h1>Projects</h1>
       <hr />
-      <ul>
-        {projects.map(project => (
-          <li key={project.id}>
-            <Project data={project} />
-          </li>
-        ))}
-      </ul>
+      <ProjectList projects={projects} />
     </div>
   );
 };
