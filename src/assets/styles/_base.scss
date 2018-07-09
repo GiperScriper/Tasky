@@ -12,11 +12,15 @@ html, body {
 }
 
 body {
-	font-size: 16px;
-	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
+
+	min-width: 320px;
+
 	font-family: $default-font;
+	font-size: 16px;
+	line-height: 1.65;
+	color: $text-color;
+	
 	overflow-x: hidden;
 }
 
@@ -24,17 +28,18 @@ input, textarea {
 	border: 1px solid #ccc;
 	padding: 10px;
 	outline: none;
-	&:focus:required:invalid {
-		border-color: red;
-	}
-	&:required:valid {
-		border-color: green;
-	}
 	&:-webkit-autofill {
 		border: 1px solid $light-brown;
 		-webkit-text-fill-color: $brown;
 		transition: background-color 5000s ease-in-out 0s;
 	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
 }
 
 a {
@@ -46,6 +51,12 @@ a {
 }
 
 button {
+	border: none;
+	background-color: transparent;
+
+	cursor: pointer;
+
+	@include transition-animation;
 	&:focus {
 		outline: none;
 	}
