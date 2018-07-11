@@ -81,7 +81,8 @@
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js",
-      "<rootDir>/src/tests/setupEnzyme.js"
+      "<rootDir>/src/tests/setupEnzyme.js",
+      "jest-localstorage-mock"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
@@ -118,5 +119,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "jest-localstorage-mock": "^2.2.0"
   }
 }

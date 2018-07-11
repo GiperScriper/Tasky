@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectList /> should render ProjectList component with projects data 1`] = `
+<ul>
+  <li
+    key="1"
+  >
+    <Component
+      data={
+        Object {
+          "description": "some sample project 1",
+          "id": 1,
+          "title": "Sample 1",
+        }
+      }
+    />
+  </li>
+  <li
+    key="2"
+  >
+    <Component
+      data={
+        Object {
+          "description": "some sample project 2",
+          "id": 2,
+          "title": "Sample 2",
+        }
+      }
+    />
+  </li>
+  <li
+    key="3"
+  >
+    <Component
+      data={
+        Object {
+          "description": "some sample project 3",
+          "id": 3,
+          "title": "Sample 3",
+        }
+      }
+    />
+  </li>
+  <li
+    key="4"
+  >
+    <Component
+      data={
+        Object {
+          "description": "some sample project 4",
+          "id": 4,
+          "title": "Sample 4",
+        }
+      }
+    />
+  </li>
+</ul>
+`;
+
+exports[`<ProjectList /> should render ProjectList with empty data 1`] = `<ul />`;

@@ -11,7 +11,7 @@ const appRouter = () => {
     <Fragment>
       <Route path="/" component={Dashboard} exact />
       <Route path="/projects" component={Projects} exact />
-      <Route path="/projects/:id" component={ProjectDetail} exact />
+      <Route path="/projects/:id" component={ProjectDetail} />
     </Fragment>
   );
 };

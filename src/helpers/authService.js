@@ -7,7 +7,7 @@ class AuthService {
     return !!window.localStorage.getItem('token');
   }
 
-  logOut(cb) {
+  logout(cb) {
     window.localStorage.clear();
     cb();
   }

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectItem /> should render ProjectItem component with proper data 1`] = `
+<div>
+  <h1>
+    <Link
+      replace={false}
+      to="/projects/1"
+    >
+      Sample 1
+    </Link>
+  </h1>
+  <p>
+    some sample project 1
+  </p>
+</div>
+`;

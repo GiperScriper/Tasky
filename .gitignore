@@ -26,4 +26,3 @@ yarn.lock
 
 
 /src/firebase/config.js
-**/__snapshots__/**/*
