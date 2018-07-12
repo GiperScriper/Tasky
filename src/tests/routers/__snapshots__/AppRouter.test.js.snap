@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppRouter /> should render AppRouter component correctly 1`] = `
+<React.Fragment>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/projects"
+  />
+  <Route
+    component={[Function]}
+    path="/projects/:id"
+  />
+</React.Fragment>
+`;

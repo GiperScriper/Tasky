@@ -1,6 +1,6 @@
 import { compose, withHandlers } from 'recompose';
 import { connect } from 'react-redux';
-import { login } from 'actions/auth';
+import { login } from '@/actions/auth';
 import loginForm from './LoginForm';
 
 const onSubmit = props => data => {

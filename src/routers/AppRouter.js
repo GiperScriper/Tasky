@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { Route } from 'react-router-dom';
 
-import Dashboard from 'components/Dashboard';
-import Projects from 'components/Projects';
-import ProjectDetail from 'components/Projects/ProjectDetail';
+import Dashboard from '@/components/Dashboard';
+import Projects from '@/components/Projects';
+import ProjectDetail from '@/components/Projects/ProjectDetail';
 
-const appRouter = () => {
+const AppRouter = () => {
   console.log('render appRouter');
   return (
     <Fragment>
@@ -16,4 +16,4 @@ const appRouter = () => {
   );
 };
 
-export default appRouter;
+export default AppRouter;

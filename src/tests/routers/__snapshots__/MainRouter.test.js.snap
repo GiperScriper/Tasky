@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainRouter /> should render MainRouter component correctly 1`] = `
+<BrowserRouter>
+  <Switch>
+    <Route
+      component={[Function]}
+      path="/login"
+    />
+    <PrivateRoute
+      component={[Function]}
+      path="/"
+    />
+  </Switch>
+</BrowserRouter>
+`;

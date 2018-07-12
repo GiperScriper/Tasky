@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { login } from 'actions/auth';
-import AuthService from 'helpers/authService';
-import AppRouter from 'routers/AppRouter';
+import { login } from '@/actions/auth';
+import AuthService from '@/helpers/authService';
+import AppRouter from '@/routers/AppRouter';
 
-import Header from 'components/Header';
+import Header from '@/components/Header';
 
 class App extends Component {
   componentWillMount = () => {

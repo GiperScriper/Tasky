@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { renderInputWithError } from 'helpers/validation';
+import { renderInputWithError } from '@/helpers/validation';
 
 import './login.scss';
 
