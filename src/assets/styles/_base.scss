@@ -9,6 +9,10 @@
 
 html, body {
 	height: 100%;
+
+	font-family: $default-font;
+	font-size: 16px;
+	color: $text-color;
 }
 
 body {
@@ -16,11 +20,6 @@ body {
 
 	min-width: 320px;
 
-	font-family: $default-font;
-	font-size: 16px;
-	line-height: 1.65;
-	color: $text-color;
-	
 	overflow-x: hidden;
 }
 
@@ -28,6 +27,7 @@ input, textarea {
 	border: 1px solid #ccc;
 	padding: 10px;
 	outline: none;
+	line-height: 1.25;
 	&:-webkit-autofill {
 		border: 1px solid $light-brown;
 		-webkit-text-fill-color: $brown;
@@ -61,6 +61,31 @@ button {
 		outline: none;
 	}
 }
+
+.dotted-spinner {
+	&__item{
+		display: inline-block;
+
+		width: 6px;
+		height: 6px;
+
+		margin-left: 6px;
+
+		border-radius: 50%;
+		background-color: $white;
+		
+		animation: fade 1s  infinite;
+		&--first {
+			animation-delay:1s;
+		}
+		&--second {
+			animation-delay:0.21s;
+		}
+		&--third {
+			animation-delay:0.4s;
+		}
+	}
+} 
 
 .text-center {
 	text-align: center;

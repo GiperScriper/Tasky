@@ -15,7 +15,15 @@ const loginForm = ({ isPending, onSubmit }) => (
             <Field name="login" type="text" placeholder="Login" component={renderInputWithError} />
             <Field name="password" type="password" placeholder="Password" component={renderInputWithError} />
             <button type="submit" className="login__button" disabled={isPending}>
-              Sign In
+              {isPending ? (
+                <div class="dotted-spinner">
+                  <div class="dotted-spinner__item dotted-spinner__item--first" />
+                  <div class="dotted-spinner__item dotted-spinner__item--second" />
+                  <div class="dotted-spinner__item dotted-spinner__item--third" />
+                </div>
+              ) : (
+                'Sign In'
+              )}
             </button>
           </form>
         )}
