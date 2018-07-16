@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 export const ProjectItem = ({ data }) => (
-  <div>
-    <h1>
-      <Link to={`/projects/${data.id}`}>{data.title}</Link>
-    </h1>
-    <p>{data.description}</p>
-  </div>
+  <Link to={`/projects/${data.id}`} className="projects__item">
+    <div className="projects__title">{data.title}</div>
+    <div className="projects__description">{data.description}</div>
+  </Link>
 );
 
 ProjectItem.propTypes = {

@@ -62,6 +62,10 @@ button {
 	}
 }
 
+.text-center {
+	text-align: center;
+}
+
 .dotted-spinner {
 	&__item{
 		display: inline-block;
@@ -85,8 +89,9 @@ button {
 			animation-delay:0.4s;
 		}
 	}
-} 
-
-.text-center {
-	text-align: center;
 }
+
+.wrapper {
+	padding: 10px;
+}
+

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ProjectItem from './ProjectItem';
 
 export const ProjectList = ({ projects }) => (
-  <ul>
+  <ul className="projects">
     {projects.map(project => (
       <li key={project.id}>
         <ProjectItem data={project} />

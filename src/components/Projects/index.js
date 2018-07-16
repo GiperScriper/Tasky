@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ProjectList from './ProjectList';
+
+import './projects.scss';
 
 export const Projects = () => {
   console.log('render projects');
@@ -17,11 +19,10 @@ export const Projects = () => {
   ];
 
   return (
-    <div>
+    <Fragment>
       <h1>Projects</h1>
-      <hr />
       <ProjectList projects={projects} />
-    </div>
+    </Fragment>
   );
 };
 

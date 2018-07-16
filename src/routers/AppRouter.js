@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Dashboard from '@/components/Dashboard';
@@ -8,11 +8,11 @@ import ProjectDetail from '@/components/Projects/ProjectDetail';
 const AppRouter = () => {
   console.log('render appRouter');
   return (
-    <Fragment>
+    <div className="wrapper">
       <Route path="/" component={Dashboard} exact />
       <Route path="/projects" component={Projects} exact />
       <Route path="/projects/:id" component={ProjectDetail} />
-    </Fragment>
+    </div>
   );
 };
 
