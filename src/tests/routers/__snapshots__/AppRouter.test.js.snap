@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AppRouter /> should render AppRouter component correctly 1`] = `
-<React.Fragment>
+<div
+  className="wrapper"
+>
   <Route
     component={[Function]}
     exact={true}
@@ -16,5 +18,5 @@ exports[`<AppRouter /> should render AppRouter component correctly 1`] = `
     component={[Function]}
     path="/projects/:id"
   />
-</React.Fragment>
+</div>
 `;

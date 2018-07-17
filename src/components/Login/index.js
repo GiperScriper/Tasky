@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { login } from '@/actions/auth';
 import loginForm from './LoginForm';
 
-const onSubmit = props => data => {
+export const onSubmit = props => data => {
   const { login, history } = props;
 
   login(data).then(() => {

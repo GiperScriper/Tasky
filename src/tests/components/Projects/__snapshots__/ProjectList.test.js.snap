@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ProjectList /> should render ProjectList component with projects data 1`] = `
-<ul>
+<ul
+  className="projects"
+>
   <li
     key="1"
   >
@@ -57,4 +59,8 @@ exports[`<ProjectList /> should render ProjectList component with projects data 
 </ul>
 `;
 
-exports[`<ProjectList /> should render ProjectList with empty data 1`] = `<ul />`;
+exports[`<ProjectList /> should render ProjectList with empty data 1`] = `
+<ul
+  className="projects"
+/>
+`;

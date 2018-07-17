@@ -1,10 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Login from '@/components/Login';
+import { onSubmit } from '@/components/Login';
 
 describe('Login Container', () => {
-  it('should render LoginForm component correctly', () => {
-    // const wrapper = shallow(<Login />);
-    expect(1).toBe(1);
+  it('should invoke onSubmit correctly', () => {
+    const props = {
+      login: data => Promise.resolve(data),
+      history: { push: jest.fn() },
+    };
+
+    const data = {
+      login: 'johndoe',
+      password: 'secretpassword',
+    };
+
+    expect(onSubmit(props)(data)).toBe(undefined);
   });
 });
