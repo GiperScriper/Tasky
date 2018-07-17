@@ -41,7 +41,6 @@ const Header = () => {
       </div>
       <div className="header__user">
         <img src={userImage} className="header__user-image" alt="User" />
-        <div className="header__user-name">Alexey Naumenko</div>
       </div>
     </header>
   );

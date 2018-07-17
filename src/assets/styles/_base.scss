@@ -66,6 +66,11 @@ button {
 	text-align: center;
 }
 
+.d-flex {
+	display: flex;
+	align-items: center;
+}
+
 .dotted-spinner {
 	&__item{
 		display: inline-block;
@@ -92,6 +97,6 @@ button {
 }
 
 .wrapper {
-	padding: 10px;
+	padding: 15px;
 }
 

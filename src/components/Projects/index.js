@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ProjectList from './ProjectList';
 
 import './projects.scss';
@@ -18,12 +18,7 @@ export const Projects = () => {
     },
   ];
 
-  return (
-    <Fragment>
-      <h1>Projects</h1>
-      <ProjectList projects={projects} />
-    </Fragment>
-  );
+  return <ProjectList projects={projects} />;
 };
 
 export default Projects;

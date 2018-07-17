@@ -4,7 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   &__item {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
 
     width: 300px;
     height: 300px;
@@ -14,19 +17,42 @@
 
     box-sizing: border-box;
     border-radius: 4px;
-    border: 1px solid $light-gray;
 
-    box-shadow: 0px 0px 30px -15px $black;
+    box-shadow: 0px 0px 10px 2px $light-gray;
     
     @include transition-animation;
     &:hover {
-      box-shadow: 0px 0px 40px -15px $black;
+      box-shadow: 0px 0px 40px -4px $gray;
     }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid $light-gray;
   }
   &__title {
     font-size: 1.6rem;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
-  &__description {}
+  &__description {
+    flex: 1 1 100%;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: $gray;
+    font-size: 0.85rem;
+  }
+  &__members {
+    margin-left: 6px;
+  }
+  &__creation-time {
+    margin-left: 6px;
+  }
 }
