@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './header.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,14 +16,14 @@ const Header = () => {
       </div>
       <ul className="header__menu">
         <li>
-          <Link className="header__menu-link" to="/">
+          <NavLink exact className="header__menu-link" activeClassName="header__menu-link--active" to="/">
             Dashboard
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link className="header__menu-link" to="/projects">
+          <NavLink className="header__menu-link" activeClassName="header__menu-link--active" to="/projects">
             Projects
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <div className="header__notice">

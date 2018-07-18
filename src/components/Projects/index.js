@@ -9,12 +9,12 @@ export const Projects = () => {
     {
       id: 1,
       title: 'Tasky',
-      description: 'TO-DO: create projects list',
+      description: 'Some custom text Some custom text Some custom text Some custom text Some custom text',
     },
     {
       id: 2,
       title: 'Sample',
-      description: 'some sample project',
+      description: 'some sample project some sample projectsome sample projectsome sample project some sample project',
     },
   ];
 
