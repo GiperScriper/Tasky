@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import ProjectItem from './ProjectItem';
+import AddProject from './AddProject';
 
 export const ProjectList = ({ projects }) => (
   <ul className="projects">
@@ -9,6 +11,9 @@ export const ProjectList = ({ projects }) => (
         <ProjectItem data={project} />
       </li>
     ))}
+    <li>
+      <AddProject />
+    </li>
   </ul>
 );
 

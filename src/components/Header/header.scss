@@ -38,14 +38,13 @@
   }
   &__notice {
     display: flex;
-
-    font-size: 20px;
   }
   &__notice-button {
     position: relative;
 
     padding: 0 15px;
 
+    font-size: 1.3rem;
     color: $gray;
 
     border-right: 1px solid $light-gray;

@@ -27,15 +27,15 @@ const Header = () => {
         </li>
       </ul>
       <div className="header__notice">
-        <button className="button header__notice-button">
+        <button className="button button--transparent header__notice-button">
           <FontAwesomeIcon icon={faBell} />
           <span className="header__notice-indicator" />
         </button>
-        <button className="button header__notice-button">
+        <button className="button button--transparent header__notice-button">
           <FontAwesomeIcon icon={faQuestionCircle} />
           <span className="header__notice-indicator" />
         </button>
-        <button className="button header__notice-button">
+        <button className="button button--transparent header__notice-button">
           <FontAwesomeIcon icon={faCog} />
         </button>
       </div>

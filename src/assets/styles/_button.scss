@@ -1,0 +1,36 @@
+@import 'assets/styles/_vars';
+
+.button {
+  padding: 5px 10px;
+
+  font-size: 1rem;
+
+  border-radius: 4px;
+  box-sizing: border-box;
+
+	cursor: pointer;
+	@include transition-animation;
+	&:focus {
+		outline: none;
+  }
+  &:not(.button--transparent) {
+    &:hover {
+      box-shadow: 0 0 11px -2px $black;
+    }
+  }
+  &--transparent {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  &--cancel {
+    border: 1px solid $text-color;
+    background-color: #fff;
+  }
+  &--success {
+    color: $white;
+    
+    border: 1px solid $green;
+    background-color: $light-green;
+  }
+}

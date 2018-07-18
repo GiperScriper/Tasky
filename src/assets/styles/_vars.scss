@@ -11,9 +11,14 @@ $text-color: #2d2d2d;
 $blue: #3a7bd5;
 $light-blue: #00d2ff;
 
+$green: #16bc16;
+$light-green: #16dd16;
+
 $orange: #fc4a1a;
 $yellow: #f7b733;
 $error: #f18b8b;
+
+
 
 $brown: #8f553a;
 $light-brown: #b8764b;
@@ -32,7 +37,7 @@ $light-gray: #ececec;
 
 
 @mixin transition-animation {
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 @mixin gradient($deg, $from, $to) {

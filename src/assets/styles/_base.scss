@@ -50,18 +50,6 @@ a {
 	}
 }
 
-button {
-	border: none;
-	background-color: transparent;
-
-	cursor: pointer;
-
-	@include transition-animation;
-	&:focus {
-		outline: none;
-	}
-}
-
 .text-center {
 	text-align: center;
 }
