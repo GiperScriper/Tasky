@@ -1,9 +1,10 @@
 @import 'assets/styles/_vars';
 
 .button {
-  padding: 5px 10px;
+  padding: 10px 15px;
 
   font-size: 1rem;
+  text-transform: uppercase;
 
   border-radius: 4px;
   box-sizing: border-box;
@@ -23,14 +24,15 @@
     border: none;
     padding: 0;
   }
-  &--cancel {
-    border: 1px solid $text-color;
+  &--secondary {
+    border: 1px solid $blue;
     background-color: #fff;
+    color: $blue;
   }
-  &--success {
+  &--primary {
     color: $white;
     
-    border: 1px solid $green;
-    background-color: $light-green;
+    border: 1px solid $blue;
+    background-color: $blue;
   }
 }

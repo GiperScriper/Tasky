@@ -37,7 +37,7 @@ $light-gray: #ececec;
 
 
 @mixin transition-animation {
-  transition: all 0.3s;
+  transition: all 0.2s ease-in-out;
 }
 
 @mixin gradient($deg, $from, $to) {
