@@ -9,10 +9,10 @@ const ProjectForm = ({ onSubmit, toggleItemView }) => (
         <Field component="input" name="title" placeholder="Title" className="additing-form__input" />
         <Field component="textarea" name="description" placeholder="Description" className="additing-form__textarea" />
         <div className="projects__footer">
-          <button className="button button--cancel" type="button" onClick={toggleItemView}>
+          <button className="button button--secondary" type="button" onClick={toggleItemView}>
             Cancel
           </button>
-          <button className="button button--success" type="submit">
+          <button className="button button--primary" type="submit">
             Save
           </button>
         </div>

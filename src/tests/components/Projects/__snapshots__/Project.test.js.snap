@@ -6,7 +6,7 @@ exports[`<ProjectItem /> should render ProjectItem component with proper data 1`
   replace={false}
   style={
     Object {
-      "borderTopColor": "#F44336",
+      "borderTopColor": "#E91E63",
     }
   }
   to="/projects/1"
