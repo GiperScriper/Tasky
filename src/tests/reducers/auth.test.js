@@ -6,7 +6,7 @@ describe('Auth reducer', () => {
     const state = authReducer(undefined, { type: '@@INIT' });
     expect(state).toEqual({
       isPending: false,
-      user: null,
+      userId: null,
       error: null,
     });
   });
@@ -17,8 +17,8 @@ describe('Auth reducer', () => {
   });
 
   it('should set User object, error to null, isPending to false ', () => {
-    const state = authReducer(undefined, { type: LOGIN_SUCCESS, payload: { name: 'John Doe' } });
-    expect(Object.keys(state.user).length).toBeTruthy();
+    const state = authReducer(undefined, { type: LOGIN_SUCCESS, payload: { userId: 'testid' } });
+    expect(Object.keys(state.userId).length).toBeTruthy();
     expect(state.error).toBe(null);
     expect(state.isPending).toBe(false);
   });

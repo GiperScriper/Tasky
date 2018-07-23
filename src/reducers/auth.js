@@ -2,7 +2,7 @@ import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILED, LOGOUT } from '@/config/const
 
 const initialState = {
   isPending: false,
-  user: null,
+  userId: null,
   error: null,
 };
 
@@ -12,7 +12,7 @@ export default (state = initialState, action) => {
       return { isPending: true };
 
     case LOGIN_SUCCESS:
-      return { user: action.payload, isPending: false, error: null };
+      return { userId: action.payload, isPending: false, error: null };
 
     case LOGIN_FAILED:
       return { error: action.payload, isPending: false };

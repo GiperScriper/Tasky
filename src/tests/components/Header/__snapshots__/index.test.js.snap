@@ -41,29 +41,32 @@ exports[`<Header /> should render Header component correctly 1`] = `
     className="header__menu"
   >
     <li>
-      <Link
+      <NavLink
+        activeClassName="header__menu-link--active"
+        ariaCurrent="true"
         className="header__menu-link"
-        replace={false}
+        exact={true}
         to="/"
       >
         Dashboard
-      </Link>
+      </NavLink>
     </li>
     <li>
-      <Link
+      <NavLink
+        activeClassName="header__menu-link--active"
+        ariaCurrent="true"
         className="header__menu-link"
-        replace={false}
         to="/projects"
       >
         Projects
-      </Link>
+      </NavLink>
     </li>
   </ul>
   <div
     className="header__notice"
   >
     <button
-      className="button header__notice-button"
+      className="button button--transparent header__notice-button"
     >
       <FontAwesomeIcon
         border={false}
@@ -99,7 +102,7 @@ exports[`<Header /> should render Header component correctly 1`] = `
       />
     </button>
     <button
-      className="button header__notice-button"
+      className="button button--transparent header__notice-button"
     >
       <FontAwesomeIcon
         border={false}
@@ -135,7 +138,7 @@ exports[`<Header /> should render Header component correctly 1`] = `
       />
     </button>
     <button
-      className="button header__notice-button"
+      className="button button--transparent header__notice-button"
     >
       <FontAwesomeIcon
         border={false}
@@ -176,11 +179,6 @@ exports[`<Header /> should render Header component correctly 1`] = `
       className="header__user-image"
       src="user.png"
     />
-    <div
-      className="header__user-name"
-    >
-      Alexey Naumenko
-    </div>
   </div>
 </header>
 `;

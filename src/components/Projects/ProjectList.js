@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import ProjectItem from './ProjectItem';
 import ProjectAddItem from './ProjectAddItem';
 
+import './projects.scss';
+
 export const ProjectList = ({ projects }) => (
   <ul className="projects">
     {projects.map(project => (

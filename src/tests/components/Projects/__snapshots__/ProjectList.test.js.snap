@@ -56,11 +56,18 @@ exports[`<ProjectList /> should render ProjectList component with projects data 
       }
     />
   </li>
+  <li>
+    <ProjectAddItem />
+  </li>
 </ul>
 `;
 
 exports[`<ProjectList /> should render ProjectList with empty data 1`] = `
 <ul
   className="projects"
-/>
+>
+  <li>
+    <ProjectAddItem />
+  </li>
+</ul>
 `;

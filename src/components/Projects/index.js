@@ -1,24 +1,24 @@
-import React from 'react';
+import { compose, lifecycle } from 'recompose';
+import { connect } from 'react-redux';
+import { getProjects } from '@/actions/project';
 import ProjectList from './ProjectList';
 
-import './projects.scss';
+const mapStateToProps = ({ projects }) => ({
+  projects: projects.data,
+});
 
-export const Projects = () => {
-  console.log('render projects');
-  const projects = [
-    {
-      id: 1,
-      title: 'Tasky',
-      description: 'Some custom text Some custom text Some custom text Some custom text Some custom text',
+const mapDispatchToProps = dispatch => ({
+  getProjects: () => dispatch(getProjects()),
+});
+
+export default compose(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  ),
+  lifecycle({
+    componentDidMount() {
+      this.props.getProjects();
     },
-    {
-      id: 2,
-      title: 'Sample',
-      description: 'some sample project some sample projectsome sample projectsome sample project some sample project',
-    },
-  ];
-
-  return <ProjectList projects={projects} />;
-};
-
-export default Projects;
+  })
+)(ProjectList);
