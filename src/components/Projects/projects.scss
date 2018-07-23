@@ -98,4 +98,10 @@
 
     resize: none; 
   }
+  .button {
+    flex: 1 1 50%;
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
 }
