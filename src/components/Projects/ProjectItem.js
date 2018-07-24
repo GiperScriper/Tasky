@@ -6,11 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserTie, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 
-import { getRandomColor } from '@/helpers/getRandomColor';
-import { colors } from './constans';
-
 export const ProjectItem = ({ data }) => (
-  <Link to={`/projects/${data.id}`} className="projects__item" style={{ borderTopColor: getRandomColor(colors) }}>
+  <Link to={`/projects/${data.id}`} className="projects__item" style={{ borderTopColor: data.color }}>
     <div className="projects__header">
       <div className="projects__title">{data.title}</div>
       <FontAwesomeIcon icon={faEllipsisV} />
