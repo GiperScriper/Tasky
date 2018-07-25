@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
-import AsyncComponent from '@/helpers/AsyncComponent';
+import AsyncComponent from '@/hocs/AsyncComponent';
 
 import Login from '@/components/Login';
 

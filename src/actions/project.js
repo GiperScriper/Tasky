@@ -57,7 +57,7 @@ export const createProject = data => async dispatch => {
 };
 
 export const getProjects = () => async dispatch => {
-  dispatch(getProjectsStart);
+  dispatch(getProjectsStart());
 
   try {
     const snapshot = await db.ref('projects').once('value');

@@ -15,8 +15,11 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case PROJECTS_GET_START:
+      return { isPending: true };
+
     case PROJECTS_GET_SUCCESS:
-      return { data: action.payload };
+      return { data: action.payload, isPending: false, error: null };
 
     case PROJECT_SAVE_START:
       return { isPending: true };
