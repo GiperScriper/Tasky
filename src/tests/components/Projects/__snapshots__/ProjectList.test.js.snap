@@ -10,6 +10,8 @@ exports[`<ProjectList /> should render ProjectList component with projects data 
     <Component
       data={
         Object {
+          "createdAt": "2018-08-07T17:43:05.792Z",
+          "creatorId": "xdsdfgfdgfgf",
           "description": "some sample project 1",
           "id": 1,
           "title": "Sample 1",
@@ -23,6 +25,8 @@ exports[`<ProjectList /> should render ProjectList component with projects data 
     <Component
       data={
         Object {
+          "createdAt": "2018-08-07T17:43:05.792Z",
+          "creatorId": "xdsdfgfdgfgf2",
           "description": "some sample project 2",
           "id": 2,
           "title": "Sample 2",
@@ -36,6 +40,8 @@ exports[`<ProjectList /> should render ProjectList component with projects data 
     <Component
       data={
         Object {
+          "createdAt": "2018-08-07T17:43:05.792Z",
+          "creatorId": "xdsdfgfdgfgf3",
           "description": "some sample project 3",
           "id": 3,
           "title": "Sample 3",
@@ -49,6 +55,8 @@ exports[`<ProjectList /> should render ProjectList component with projects data 
     <Component
       data={
         Object {
+          "createdAt": "2018-08-07T17:43:05.792Z",
+          "creatorId": "xdsdfgfdgfgf4",
           "description": "some sample project 4",
           "id": 4,
           "title": "Sample 4",
