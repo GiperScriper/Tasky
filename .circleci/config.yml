@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:9.11.2
+    environment:
+      CI: false
     steps:
       - checkout
       - run: npm install yarn
