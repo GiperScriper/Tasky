@@ -1,5 +1,7 @@
 import { compose, withHandlers } from 'recompose';
 import { connect } from 'react-redux';
+import moment from 'moment';
+
 import { createProject } from '@/actions/project';
 import ProjectForm from './ProjectForm';
 import { getRandomColor } from '@/helpers/getRandomColor';
@@ -10,7 +12,13 @@ export const onSubmit = props => data => {
   const color = getRandomColor(colors);
 
   createProject({
-    project: { ...data, userId, color },
+    project: {
+      ...data,
+      color,
+      creatorId: userId,
+      createdAt: moment().format(),
+      members: [userId],
+    },
     toggleItemView,
   });
 };

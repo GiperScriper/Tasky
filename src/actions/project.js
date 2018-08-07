@@ -62,7 +62,7 @@ export const getProjects = () => async dispatch => {
   try {
     const snapshot = await db.ref('projects').once('value');
     const data = snapshot.val();
-    const projects = Object.keys(data).map(id => ({ id, ...data[id] }));
+    const projects = data ? Object.keys(data).map(id => ({ id, ...data[id] })) : [];
 
     dispatch(getProjectsSuccess(projects));
   } catch (error) {
