@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import createStore from 'store';
+
+import { verifyAuth } from '@/actions/auth';
+
 import registerServiceWorker from './registerServiceWorker';
 
 import 'normalize.css';
@@ -18,6 +21,9 @@ const App = (
 );
 
 ReactDOM.render(App, document.getElementById('root'));
+
+store.dispatch(verifyAuth());
+
 registerServiceWorker();
 
 if (process.env.NODE_ENV !== 'production') {

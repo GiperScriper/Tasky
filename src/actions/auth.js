@@ -28,3 +28,14 @@ export const login = ({ login, password }) => async dispatch => {
     dispatch(loginFailed(error));
   }
 };
+
+export const verifyAuth = () => dispatch => {
+  dispatch(loginStart());
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      dispatch(loginSuccess(user.uid));
+    }
+
+    // TO-DO logout
+  });
+};

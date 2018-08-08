@@ -2,17 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { login } from '@/actions/auth';
-import AuthService from '@/helpers/authService';
 import AppRouter from '@/routers/AppRouter';
 
 import Header from '@/components/Header';
 
 class App extends Component {
-  componentWillMount = () => {
-    if (AuthService.isAuthenticated()) {
-      // this.props.login('some data');
-    }
-  };
+  componentDidMount = () => {};
 
   render() {
     console.log('app');
@@ -27,7 +22,7 @@ class App extends Component {
 
 const mapStateToProps = ({ auth }) => {
   return {
-    isLoggenIn: auth.loggedIn,
+    userId: auth.userId,
   };
 };
 
