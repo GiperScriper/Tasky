@@ -130,7 +130,7 @@ exports[`<ProjectItem /> should render ProjectItem component with proper data 1`
       <div
         className="projects__creation-time"
       >
-        a day ago
+        2 days ago
       </div>
     </div>
   </div>

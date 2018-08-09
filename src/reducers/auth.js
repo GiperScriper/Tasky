@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
       return { error: action.payload, isPending: false };
 
     case LOGOUT:
-      return {};
+      return initialState;
 
     default:
       return state;

@@ -7,7 +7,7 @@ exports[`<MainRouter /> should render MainRouter component correctly 1`] = `
       component={[Function]}
       path="/login"
     />
-    <PrivateRoute
+    <Connect(PrivateRoute)
       component={[Function]}
       path="/"
     />

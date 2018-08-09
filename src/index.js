@@ -20,9 +20,9 @@ const App = (
   </Provider>
 );
 
-ReactDOM.render(App, document.getElementById('root'));
+const renderApp = () => ReactDOM.render(App, document.getElementById('root'));
 
-store.dispatch(verifyAuth());
+store.dispatch(verifyAuth(renderApp));
 
 registerServiceWorker();
 

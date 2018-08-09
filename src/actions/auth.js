@@ -1,4 +1,4 @@
-import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILED } from '@/config/constants';
+import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILED, LOGOUT } from '@/config/constants';
 import { firebase } from '@/firebase';
 import authService from '@/helpers/authService';
 
@@ -16,11 +16,14 @@ export const loginFailed = error => ({
   payload: error,
 });
 
+export const logout = () => ({
+  type: LOGOUT,
+});
+
 export const login = ({ login, password }) => async dispatch => {
   dispatch(loginStart());
   try {
     const response = await firebase.auth().signInWithEmailAndPassword(login, password);
-    dispatch(loginSuccess(response.user.uid));
     authService.setToken(response.user.qa);
 
     return Promise.resolve();
@@ -29,13 +32,11 @@ export const login = ({ login, password }) => async dispatch => {
   }
 };
 
-export const verifyAuth = () => dispatch => {
-  dispatch(loginStart());
+export const verifyAuth = renderApp => dispatch => {
   firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      dispatch(loginSuccess(user.uid));
-    }
-
-    // TO-DO logout
+    user ? dispatch(loginSuccess(user.uid)) : dispatch(logout());
+    renderApp();
   });
 };
+
+export const startLogout = () => () => firebase.auth().signOut();
