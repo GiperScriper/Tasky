@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
 import { renderInputWithError } from '@/helpers/validation';
+import { Link } from 'react-router-dom';
 
 import './login.scss';
 
@@ -26,6 +27,9 @@ const loginForm = ({ isPending, onSubmit }) => (
                 'Sign In'
               )}
             </button>
+            <Link to="/register" className="login__register--link">
+              Sign Up
+            </Link>
           </form>
         )}
       />

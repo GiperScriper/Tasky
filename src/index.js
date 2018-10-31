@@ -22,6 +22,8 @@ const App = (
 
 const renderApp = () => ReactDOM.render(App, document.getElementById('root'));
 
+ReactDOM.render(<h1>LOADING</h1>, document.getElementById('root'));
+
 store.dispatch(verifyAuth(renderApp));
 
 registerServiceWorker();

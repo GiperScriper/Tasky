@@ -92,7 +92,7 @@
       }
     }
   }
-  
+
   &__title {
     font-family: $gloria-font;
 
@@ -116,7 +116,7 @@
     border-radius: 4px;
 
     cursor: pointer;
-    
+
     color: $white;
     background-color: $brown;
 
@@ -124,6 +124,10 @@
     &:hover {
       @include gradient(180deg, $brown, $light-brown);
     }
+  }
+
+  &__register--link {
+    color: $white;
   }
 }
 
