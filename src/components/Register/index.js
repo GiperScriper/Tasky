@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { compose } from 'recompose';
-import Api from '@/components/Api';
+import api from '@/api';
 
 class Register extends Component {
   initialData = {
@@ -65,11 +65,11 @@ class Register extends Component {
     this.setState({ isPending: true, errorMessage: null });
 
     try {
-      const createdUser = await Api.createUser(data);
+      const createdUser = await api.createUser(data);
       await createdUser.user.updateProfile({
         displayName: data.username,
       });
-      await Api.saveUser(createdUser.user);
+      await api.saveUser(createdUser.user);
       this.setState({ data: this.initialData });
     } catch ({ message }) {
       this.setState({ errorMessage: message });
@@ -83,7 +83,6 @@ class Register extends Component {
     const { errorMessage, errors, isPending } = this.state;
     return (
       <div>
-        {this.state.isPending ? <h1>True</h1> : <h2>False</h2>}
         <form onSubmit={this.handleSubmit} noValidate>
           <label>Username:</label>
           <input type="text" name="username" value={username} onChange={this.handleChange} />

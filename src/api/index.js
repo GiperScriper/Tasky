@@ -1,6 +1,6 @@
 import db, { firebase } from '@/firebase';
 
-const Api = {
+const api = {
   createUser: ({ email, password }) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password);
   },
@@ -11,4 +11,4 @@ const Api = {
   },
 };
 
-export default Api;
+export default api;

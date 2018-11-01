@@ -1,152 +1,202 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LoginForm /> should render LoginForm component correctly 1`] = `
-<loginForm
-  isPending={false}
-  onSubmit={[Function]}
->
-  <div
-    className="login__container"
+<MemoryRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "0c7age",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "0c7age",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
   >
-    <div
-      className="login__title"
+    <loginForm
+      isPending={false}
+      onSubmit={[Function]}
     >
-      Tasky
-    </div>
-    <div
-      className="login__bg"
-    >
-      <ReactFinalForm
-        onSubmit={[Function]}
-        render={[Function]}
+      <div
+        className="login__container"
       >
-        <form
-          className="login__form"
-          name="loginForm"
-          onSubmit={[Function]}
+        <div
+          className="login__title"
         >
-          <Field
-            component={[Function]}
-            format={[Function]}
-            name="login"
-            parse={[Function]}
-            placeholder="Login"
-            type="text"
+          Tasky
+        </div>
+        <div
+          className="login__bg"
+        >
+          <ReactFinalForm
+            onSubmit={[Function]}
+            render={[Function]}
           >
-            <Component
-              input={
-                Object {
-                  "name": "login",
-                  "onBlur": [Function],
-                  "onChange": [Function],
-                  "onFocus": [Function],
-                  "value": "",
-                }
-              }
-              meta={
-                Object {
-                  "active": false,
-                  "data": Object {},
-                  "dirty": false,
-                  "dirtySinceLastSubmit": false,
-                  "error": undefined,
-                  "initial": undefined,
-                  "invalid": false,
-                  "pristine": true,
-                  "submitError": undefined,
-                  "submitFailed": false,
-                  "submitSucceeded": false,
-                  "touched": false,
-                  "valid": true,
-                  "visited": false,
-                }
-              }
-              placeholder="Login"
-              type="text"
+            <form
+              className="login__form"
+              name="loginForm"
+              onSubmit={[Function]}
             >
-              <div
-                className="login__item login__item--text"
+              <Field
+                component={[Function]}
+                format={[Function]}
+                name="login"
+                parse={[Function]}
+                placeholder="Login"
+                type="text"
               >
-                <input
-                  className="login__input"
-                  name="login"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
+                <Component
+                  input={
+                    Object {
+                      "name": "login",
+                      "onBlur": [Function],
+                      "onChange": [Function],
+                      "onFocus": [Function],
+                      "value": "",
+                    }
+                  }
+                  meta={
+                    Object {
+                      "active": false,
+                      "data": Object {},
+                      "dirty": false,
+                      "dirtySinceLastSubmit": false,
+                      "error": undefined,
+                      "initial": undefined,
+                      "invalid": false,
+                      "pristine": true,
+                      "submitError": undefined,
+                      "submitFailed": false,
+                      "submitSucceeded": false,
+                      "touched": false,
+                      "valid": true,
+                      "visited": false,
+                    }
+                  }
                   placeholder="Login"
-                  spellCheck="false"
                   type="text"
-                  value=""
-                />
-              </div>
-            </Component>
-          </Field>
-          <Field
-            component={[Function]}
-            format={[Function]}
-            name="password"
-            parse={[Function]}
-            placeholder="Password"
-            type="password"
-          >
-            <Component
-              input={
-                Object {
-                  "name": "password",
-                  "onBlur": [Function],
-                  "onChange": [Function],
-                  "onFocus": [Function],
-                  "value": "",
-                }
-              }
-              meta={
-                Object {
-                  "active": false,
-                  "data": Object {},
-                  "dirty": false,
-                  "dirtySinceLastSubmit": false,
-                  "error": undefined,
-                  "initial": undefined,
-                  "invalid": false,
-                  "pristine": true,
-                  "submitError": undefined,
-                  "submitFailed": false,
-                  "submitSucceeded": false,
-                  "touched": false,
-                  "valid": true,
-                  "visited": false,
-                }
-              }
-              placeholder="Password"
-              type="password"
-            >
-              <div
-                className="login__item login__item--password"
+                >
+                  <div
+                    className="login__item login__item--text"
+                  >
+                    <input
+                      className="login__input"
+                      name="login"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      placeholder="Login"
+                      spellCheck="false"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </Component>
+              </Field>
+              <Field
+                component={[Function]}
+                format={[Function]}
+                name="password"
+                parse={[Function]}
+                placeholder="Password"
+                type="password"
               >
-                <input
-                  className="login__input"
-                  name="password"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
+                <Component
+                  input={
+                    Object {
+                      "name": "password",
+                      "onBlur": [Function],
+                      "onChange": [Function],
+                      "onFocus": [Function],
+                      "value": "",
+                    }
+                  }
+                  meta={
+                    Object {
+                      "active": false,
+                      "data": Object {},
+                      "dirty": false,
+                      "dirtySinceLastSubmit": false,
+                      "error": undefined,
+                      "initial": undefined,
+                      "invalid": false,
+                      "pristine": true,
+                      "submitError": undefined,
+                      "submitFailed": false,
+                      "submitSucceeded": false,
+                      "touched": false,
+                      "valid": true,
+                      "visited": false,
+                    }
+                  }
                   placeholder="Password"
-                  spellCheck="false"
                   type="password"
-                  value=""
-                />
-              </div>
-            </Component>
-          </Field>
-          <button
-            className="login__button"
-            disabled={false}
-            type="submit"
-          >
-            Sign In
-          </button>
-        </form>
-      </ReactFinalForm>
-    </div>
-  </div>
-</loginForm>
+                >
+                  <div
+                    className="login__item login__item--password"
+                  >
+                    <input
+                      className="login__input"
+                      name="password"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      placeholder="Password"
+                      spellCheck="false"
+                      type="password"
+                      value=""
+                    />
+                  </div>
+                </Component>
+              </Field>
+              <button
+                className="login__button"
+                disabled={false}
+                type="submit"
+              >
+                Sign In
+              </button>
+              <Link
+                className="login__register--link"
+                replace={false}
+                to="/register"
+              >
+                <a
+                  className="login__register--link"
+                  href="/register"
+                  onClick={[Function]}
+                >
+                  Sign Up
+                </a>
+              </Link>
+            </form>
+          </ReactFinalForm>
+        </div>
+      </div>
+    </loginForm>
+  </Router>
+</MemoryRouter>
 `;
